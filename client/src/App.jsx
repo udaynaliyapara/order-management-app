@@ -1,14 +1,7 @@
-import { useEffect } from "react";
-import { api } from "./api/axios";
+import Menu from "./pages/Menu";
 
 function App() {
-  useEffect(() => {
-    api.get("/").then(res => {
-      console.log(res.data);
-    });
-  }, []);
-
-  return <h1>App Running</h1>;
+  return <Menu />;
 }
 
 export default App;
