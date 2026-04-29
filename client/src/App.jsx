@@ -1,4 +1,5 @@
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import Menu from "./pages/Menu";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Menu />
       <Cart />
+      <Checkout />
     </>
   );
 }
