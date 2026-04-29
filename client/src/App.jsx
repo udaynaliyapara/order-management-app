@@ -1,10 +1,13 @@
+import Cart from "./pages/Cart";
 import Menu from "./pages/Menu";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
 
 function App() {
-  return <Menu />;
+  return (
+    <>
+      <Menu />
+      <Cart />
+    </>
+  );
 }
 
 export default App;

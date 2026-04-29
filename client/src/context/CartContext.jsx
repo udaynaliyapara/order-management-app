@@ -37,11 +37,13 @@ function cartReducer(state, action) {
         case "UPDATE_QUANTITY":
             return {
                 ...state,
-                items: state.items.map(item =>
-                    item.id === action.payload.id
-                        ? { ...item, quantity: action.payload.quantity }
-                        : item
-                )
+                items: state.items
+                    .map(item =>
+                        item.id === action.payload.id
+                            ? { ...item, quantity: action.payload.quantity }
+                            : item
+                    )
+                    .filter(item => item.quantity > 0)
             };
 
         default:
