@@ -46,6 +46,12 @@ function cartReducer(state, action) {
                     .filter(item => item.quantity > 0)
             };
 
+        case "CLEAR_CART":
+            return {
+                ...state,
+                items: []
+            };
+
         default:
             return state;
     }
