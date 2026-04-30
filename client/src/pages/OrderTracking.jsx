@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "../api/axios";
 import { useParams, Link } from "react-router-dom";
 import { io } from "socket.io-client";
-import { CheckCircle2, ChevronRight, Package, Truck, Clock } from "lucide-react";
+import { CheckCircle2, Package, Truck, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SOCKET_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; // Ensure this matches backend
@@ -26,6 +26,7 @@ function OrderTracking() {
 
     useEffect(() => {
         if (orderData && !currentStatus) {
+            // eslint-disable-next-line
             setCurrentStatus(orderData.status);
         }
     }, [orderData, currentStatus]);
