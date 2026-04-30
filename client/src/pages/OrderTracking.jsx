@@ -6,7 +6,7 @@ import { io } from "socket.io-client";
 import { CheckCircle2, ChevronRight, Package, Truck, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
-const SOCKET_URL = "http://localhost:5000"; // Ensure this matches backend
+const SOCKET_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; // Ensure this matches backend
 
 const statuses = [
     { key: "Order Received", label: "Received", icon: Clock },
